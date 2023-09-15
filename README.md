@@ -29,11 +29,11 @@ Active Directory is a product by Microsoft that is for domain network services. 
 
 <h3>Step 1: Create resources</h3>
 
-First step is to create to two Azure virtual machines. If don't know how to create a virtual machine in Azure, please see my tutorial [here](https://github.com/klcarpio/Create-an-Azure-Account-and-Deploy-a-Virtual-Machine).
+The first step is to create to two Azure virtual machines. 
 
-The first virtual machine is the domain controller (DC-1) which will have Windows Server 2022. A domain controller is the main server computer network that gives access to its domain resources and authenticates users that are connected to it. 
+The first virtual machine is the domain controller (DC-1) and will run Windows Server 2022. A domain controller is the main server computer network that gives access to its domain resources and authenticates users that are connected to it. 
 
-The second virtual machine is the client (Client-1) which will have Windows 10. The client is just any computer connected to the domain controller. 
+The second virtual machine is the client (Client-1) and will run Windows 10. The client is just any computer connected to the domain controller. 
 
 Note: Ensure that Client-1 is on the same virutal network as DC-1. This is normally automatically done under the "Networking" tab but double check. 
 
