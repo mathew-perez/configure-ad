@@ -113,34 +113,17 @@ Once the account has been created, right click it and go to "Properties." From t
 
 Log out of DC-1 as "labuser" and log back in as the administrator account that was created (jane_admin). 
 
-<p>
-<img src="https://i.imgur.com/RgmSMJB.png" height="80%" width="80%" alt="32"/>
-</p>
-
-<p>
-<img src="https://i.imgur.com/33X3zMJ.png" height="80%" width="80%" alt="33"/>
-</p>
+![image](https://github.com/mathew-perez/configure-ad/assets/144407220/9a1b7737-37ce-4286-8516-49ab421754e6)
 
 <h3>Step 5: Join Client to the Domain Controller </h3>
-Fifth step is to join Client-1 to DC-1. 
+The fifth step is to join Client-1 to DC-1. 
 
 <br>
 
-To do this, go back to the Azure Portal. Go to the Client-1 virtual machine and click on the "Networking" section in underneath "Settings" on the left hand side. 
+To do this, go back to the Azure Portal. Go to the Client-1 virtual machine and click on the "Networking" section in underneath "Settings" on the left hand side. From there, click on "DNS Servers." Then click, "Custom." Type in DC-1's private IP address (10.0.0.4). 
 
-<p>
-<img src="https://i.imgur.com/jwMFN40.png" height="80%" width="80%" alt="34"/>
-</p>
+![image](https://github.com/mathew-perez/configure-ad/assets/144407220/da7f2e57-3f40-4b04-8178-64fb50e513f9)
 
-From there, click on "DNS Servers." Then click, "Custom." Type in DC-1's private IP address (10.0.0.4). 
-
-<p>
-<img src="https://i.imgur.com/2dPPj3C.png" height="80%" width="80%" alt="35"/>
-</p>
-
-<p>
-<img src="https://i.imgur.com/1xed7dc.png" height="80%" width="80%" alt="36"/>
-</p>
 
 Restart Client-1 and log back in. Once logged in, right click the Start menu and click on "System."
 
