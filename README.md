@@ -53,7 +53,7 @@ Click the dynamic to static option on the right drop down menu.
 
 
 <h3>Step 2: Establish connectivity to between Domain Controller and Client</h3>
-Second step is establish connectivity between Client-1 and DC-1. Use Microsoft Remote Desktop to connect to both virtual machines. 
+The second step is establish connectivity between Client-1 and DC-1. Use Microsoft Remote Desktop to connect to both virtual machines. 
 <br>
 Open Client-1 and open the Command line. Type in the command "ping -t" + the private IP address of DC-1. In this case, it is 10.0.0.4. The "ping -t" command will continously ping DC-1. 
 
@@ -72,105 +72,44 @@ Switch back to Client-1 and the Command line will start to ping DC-1 successfull
 
 <h3>Step 3: Install Active Directory</h3>
 
-Third step is to install Active Directory Domain Services. Go back into DC-1 Open the Server Manager in DC-1. This should normally open whenever DC-1 is logged into for the first. It can also be found in the Start menu.
+The third step is to install Active Directory Domain Services. Go back into DC-1 Open the Server Manager in DC-1. This should normally open whenever DC-1 is logged into for the first. It can also be found in the Start menu.
 
-<p>
-<img src="https://i.imgur.com/hJxsS51.png" height="80%" width="80%" alt="12"/>
-</p>
+In Server Manager, click "Add roles and features." Follow the prompts. At "Server Roles", check "Active Directory Domain Services." Then click "Add Features." Then continue to follow all the installation prompts until it is done. 
 
-In Server Manager, click "Add roles and features." Follow the prompts. At "Server Roles", check "Active Directory Domain Services." Then click "Add Features."
+![image](https://github.com/mathew-perez/configure-ad/assets/144407220/496431aa-efc6-4131-8e2f-46d148976e89)
 
-<p>
-<img src="https://i.imgur.com/oF9MYOM.png" height="80%" width="80%" alt="14"/>
-</p>
+![image](https://github.com/mathew-perez/configure-ad/assets/144407220/ee855433-823a-45c4-82dc-1f39ac24ae05)
 
-<p>
-<img src="https://i.imgur.com/QYvvnoF.png" height="80%" width="80%" alt="15"/>
-</p>
-
-
-Continue to follow all the installation prompts until it is done. 
-
-<p>
-<img src="https://i.imgur.com/0LSc0Wi.png" height="80%" width="80%" alt="16"/>
-</p>
 
 Once the installation is done, back at the Server Manager Dashboard, click the flag with the yellow hazard sign underneath. Then click "Promote this server to a domain controller."
 
-<p>
-<img src="https://i.imgur.com/a9q1YeQ.png" height="80%" width="80%" alt="17"/>
-</p>
-
-<p>
-<img src="https://i.imgur.com/lPegL0Q.png" height="80%" width="80%" alt="18"/>
-</p>
-
 Click "Add a new forest" and type in the root domain. In this example, it was mydomain.com.
 
-<p>
-<img src="https://i.imgur.com/0T7J6hZ.png" height="80%" width="80%" alt="19"/>
-</p>
+![image](https://github.com/mathew-perez/configure-ad/assets/144407220/62c06a50-bfd3-4629-9625-d9b28508d489)
+
 
 Follow all the prompts to finish the installation. DC-1 will restart to add all the updates. It may take some time to update and log back in. 
 
-<p>
-<img src="https://i.imgur.com/0qO8sIv.png" height="80%" width="80%" alt="20"/>
-</p>
-
-<p>
-<img src="https://i.imgur.com/DYXJjRX.png" height="80%" width="80%" alt="21"/>
-</p>
 
 <h3>Step 4: Create an administrator and regular account in Active Directory</h3>
-Fourth step is to create an administrator account and a regular account in Active Directory. 
+The fourth step is to create an administrator account and a regular account in Active Directory. 
 
 Once DC-1 has restarted, open up Server Manager, click "Tools" in the upper right corner, and select "Active Directory Users and Computers."
 
-<p>
-<img src="https://i.imgur.com/8Byqn45.png" height="80%" width="80%" alt="22"/>
-</p>
-
 In Active Directory Users and Computers, right click the domain (mydomain.com), go to "New" and "Organizational Unit." Create two organizational units for administrators (_ ADMINS) and employees (_ EMPLOYEES). Once done, right click mydomain.com and click referesh to sort the new organizational units to the top. 
 
-<p>
-<img src="https://i.imgur.com/RtW3ahG.png" height="80%" width="80%" alt="23"/>
-</p>
+![image](https://github.com/mathew-perez/configure-ad/assets/144407220/a2e6c2a8-948e-43b4-b40a-f0d2fe4436bf)
+![image](https://github.com/mathew-perez/configure-ad/assets/144407220/c9738198-fcaa-4512-8155-e143cfd6f9b5)
 
-<p>
-<img src="https://i.imgur.com/HhrKred.png" height="80%" width="80%" alt="24"/>
-</p>
-
-<p>
-<img src="https://i.imgur.com/MiJ08vZ.png" height="80%" width="80%" alt="25"/>
-</p>
-
-<p>
-<img src="https://i.imgur.com/CiknW69.png" height="80%" width="80%" alt="26"/>
-</p>
 
 Click on the _ ADMINS organizational unit and right click into the right window pane. Go to "New" and click "User." Fill in the boxes to create a new user. In this example, "Jane Doe" was used and the login name is "jane_admin."
 
-<p>
-<img src="https://i.imgur.com/7OonWQN.png" height="80%" width="80%" alt="27"/>
-</p>
-
-<p>
-<img src="https://i.imgur.com/UeEhhOd.png" height="80%" width="80%" alt="28"/>
-</p>
-
-<p>
-<img src="https://i.imgur.com/cpGgmF1.png" height="80%" width="80%" alt="29"/>
-</p>
-
 Once the account has been created, right click it and go to "Properties." From there, click the "Member Of" tab, click the "Add..." button, type in domain and click the "Check Names" button. From there, click "Domain Admins" and press "OK" and "Apply" to exit out. 
 
-<p>
-<img src="https://i.imgur.com/haUxS8o.png" height="80%" width="80%" alt="30"/>
-</p>
+![image](https://github.com/mathew-perez/configure-ad/assets/144407220/bf518df4-c02f-4ea7-859b-8bd1dd6b546e)
 
-<p>
-<img src="https://i.imgur.com/Bh813Yi.png" height="80%" width="80%" alt="31"/>
-</p>
+![image](https://github.com/mathew-perez/configure-ad/assets/144407220/8ceba161-0c60-4635-b0e5-31ef1a979f6e)
+
 
 Log out of DC-1 as "labuser" and log back in as the administrator account that was created (jane_admin). 
 
