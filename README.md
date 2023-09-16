@@ -125,44 +125,19 @@ To do this, go back to the Azure Portal. Go to the Client-1 virtual machine and 
 ![image](https://github.com/mathew-perez/configure-ad/assets/144407220/da7f2e57-3f40-4b04-8178-64fb50e513f9)
 
 
-Restart Client-1 and log back in. Once logged in, right click the Start menu and click on "System."
+Restart the Client-1 VM and log back in. Once logged in, right click the Start menu and click on "System." On the right hand side, click "Rename this PC (advanced)." Then click the "Change..." button and type in the domain name (mydomain.com). Log in using jane_admin and allow for the virtual machine to restart.
 
-<p>
-<img src="https://i.imgur.com/xkU5A1U.png" height="80%" width="80%" alt="37"/>
-</p>
+![image](https://github.com/mathew-perez/configure-ad/assets/144407220/1cad0a8c-4621-4a0b-bcd5-4853e97f342a)
+![image](https://github.com/mathew-perez/configure-ad/assets/144407220/856ae7ef-eec2-4fa0-8e8f-818527c1d6fe)
 
-On the right hand side, click "Rename this PC (advanced)." Then click the "Change..." button and type in the domain name (mydomain.com). 
-
-<p>
-<img src="https://i.imgur.com/Icy1PH1.png" height="80%" width="80%" alt="38"/>
-</p>
-
-Open up the Command line and type the command "ipconfig /displaydns." This will show all the Fully Qualified Domain Names associated to Client-1. It will show that the DNS Servers are associated to DC-1's private IP address. 
-
-<p>
-<img src="https://i.imgur.com/ozaaPMB.png" height="80%" width="80%" alt="39"/>
-</p>
 
 <h3>Step 6: Setup Remote Desktop for non-administrative users to Client</h3>
-Sixth step is to setup Remote Desktop for non-administrative users to Client-1. To do this, log into Client-1. This time, log in using the domain name and the admin account (mydomain.com\jane_admin).
+The sixth step is to setup Remote Desktop for non-administrative users to Client-1. To do this, log into Client-1. This time, log in using the domain name and the admin account (mydomain.com\jane_admin).
 
-<p>
-<img src="https://i.imgur.com/33LPGMy.png" height="80%" width="80%" alt="40"/>
-</p>
+Once logged in, right click the Start menu and click "System." Then click "Remote desktop" on the right side. On the bottom click "select users that can remotely access ths pc". From there, click "Add..." and type in "Domain Users." Click "Check Names" and click "OK" to exit out. 
 
-Once logged in, right click the Start menu and click "System." Then click "Remote desktop" on the right side. From there, click "Add..." and type in "Domain Users." Click "Check Names" and click "OK" to exit out. 
+![image](https://github.com/mathew-perez/configure-ad/assets/144407220/ad5ba5ef-f61a-4248-9a04-cc9abd065450)
 
-<p>
-<img src="https://i.imgur.com/f2nqqY3.png" height="80%" width="80%" alt="41"/>
-</p>
-
-<p>
-<img src="https://i.imgur.com/GNZgZQw.png" height="80%" width="80%" alt="42"/>
-</p>
-
-<p>
-<img src="https://i.imgur.com/250dtjg.png" height="80%" width="80%" alt="43"/>
-</p>
 
 <h3>Step 7: Create users in Active Directory using Powershell script</h3>
 Seventh and final step is to use Powershell to create users. 
