@@ -193,20 +193,12 @@ Once the users have been created, go back to Active Directory Users and Computer
 
 
 <h3>Bonus Step: How to unlock users' accounts and reset passwords</h3>
-In order to unlock a user's account, right click the user account and click "Properties." 
-Click on "Unlock Account." You can also right click the user account and "Reset Password..."
+On the DC-1 VM, go to active directory users and computers. Go to the _Employees folder right click the user account and click "Properties" -> "Account". Click on "Unlock Account." You can also right click the user account and "Reset Password..."
 
-<p>
-<img src="https://i.imgur.com/HTcYBBU.png" height="80%" width="80%" alt="49"/>
-</p>
+![image](https://github.com/mathew-perez/configure-ad/assets/144407220/29bba8f2-04c1-4fa2-bf65-a74a52d666e7)
 
-<p>
-<img src="https://i.imgur.com/lNfDusu.png" height="80%" width="80%" alt="50"/>
-</p>
+![image](https://github.com/mathew-perez/configure-ad/assets/144407220/9fcf4ef9-d9d9-4be9-8776-5bd2ba52c4dc)
 
-<p>
-<img src="https://i.imgur.com/HrMlyi7.png" height="80%" width="80%" alt="51"/>
-</p>
 
 Thank you for checking out my Active Directory tutorial! I hope you were able to learn and build some intuition on how to use Active Directory. 
 
