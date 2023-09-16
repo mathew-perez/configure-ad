@@ -36,33 +36,22 @@ The first virtual machine is the domain controller (DC-1) and will run Windows S
 The second virtual machine is the client (Client-1) and will run Windows 10. The client is just any computer connected to the domain controller. 
 
 ![image](https://github.com/mathew-perez/configure-ad/assets/144407220/62884693-1096-41e3-9c3a-fb89cfc4423f)
+![image](https://github.com/mathew-perez/configure-ad/assets/144407220/f791b1f0-1f4d-469b-b714-6e5302489616)
 
 
 Next is to ensure DC-1's private IP address is changed from dynamic to static. DC-1's private IP address needs to be static so it does not change during the course of this exercise. 
 
-To do this, go to DC-1's "Networking" section and click on the virtual Network Interface Card (NIC).
+To do this, go to DC-1's "Networking" section and click on the virtual Network Interface Card (NIC)
+Click on IP configurations.
 
-<p>
-<img src="https://i.imgur.com/EuDoPB6.png" height="80%" width="80%" alt="3. DC1 NIC"/>
-</p>
+Click ipconfig1 for the private IP address (10.0.0.4) of your VM.
 
-From there, click on IP configurations. 
+Click the  dynamic to static on the right drop down menu.
 
-<p>
-<img src="https://i.imgur.com/LMRzrup.png" height="80%" width="80%" alt="4. DC1 IP Config"/>
-</p>
+![image](https://github.com/mathew-perez/configure-ad/assets/144407220/e54f59e6-1ebf-48ed-8c88-b60700d196af)
+![image](https://github.com/mathew-perez/configure-ad/assets/144407220/6307588f-0914-4193-8dcc-1cd29bed91d1)
 
-Click on the private IP address (10.0.0.4). 
 
-<p>
-<img src="https://i.imgur.com/UMIfZlx.png" height="80%" width="80%" alt="5. DC1 private IP"/>
-</p>
-
-Click the "Assignment" button to switch it from dynamic to static. 
-
-<p>
-<img src="https://i.imgur.com/awI6Rpz.png" height="80%" width="80%" alt="6. Change dynamic to static"/>
-</p>
 
 <h3>Step 2: Establish connectivity to between Domain Controller and Client</h3>
 Second step is establish connectivity between Client-1 and DC-1. Use Microsoft Remote Desktop to connect to both virtual machines. 
