@@ -46,11 +46,10 @@ Click on IP configurations.
 
 Click ipconfig1 for the private IP address (10.0.0.4) of your VM.
 
-Click the  dynamic to static on the right drop down menu.
+Click the dynamic to static option on the right drop down menu.
 
 ![image](https://github.com/mathew-perez/configure-ad/assets/144407220/e54f59e6-1ebf-48ed-8c88-b60700d196af)
 ![image](https://github.com/mathew-perez/configure-ad/assets/144407220/6307588f-0914-4193-8dcc-1cd29bed91d1)
-
 
 
 <h3>Step 2: Establish connectivity to between Domain Controller and Client</h3>
@@ -58,31 +57,18 @@ Second step is establish connectivity between Client-1 and DC-1. Use Microsoft R
 <br>
 Open Client-1 and open the Command line. Type in the command "ping -t" + the private IP address of DC-1. In this case, it is 10.0.0.4. The "ping -t" command will continously ping DC-1. 
 
-<p>
-<img src="https://i.imgur.com/hhelYIM.png" height="80%" width="80%" alt="7. Ping DC1 from Client1"/>
-</p>
+![image](https://github.com/mathew-perez/configure-ad/assets/144407220/19b1fe2f-9d6c-49c7-93fa-7d1bf78019f4)
 
-Due to the firewall blocking incoming Internet Control Message Protocol (ICMP) traffic, the request is timing out. To fix this, login into DC-1 and open the application Windows Defender Firewall with Advanced Security from the Start menu. 
 
-<p>
-<img src="https://i.imgur.com/axnzdcP.png" height="80%" width="80%" alt="8. DC1 Firewall 1"/>
-</p>
+Due to the firewall blocking incoming Internet Control Message Protocol (ICMP) traffic, the request is timing out. To fix this, login into DC-1 and open the application Windows Defender Firewall with Advanced Security (wf.msc) from the Start menu. From here, go to inbound security rules and sort the list by protocol. Scroll down to ICMPv4 and enable the two core network inbound rules. 
 
-<p>
-<img src="https://i.imgur.com/gqQwYO8.png" height="80%" width="80%" alt="9. DC1 Firewall 2"/>
-</p>
+![image](https://github.com/mathew-perez/configure-ad/assets/144407220/7e8c25db-1183-4a5e-b745-fe87aa56933e)
 
-From here, sort the list by protocol so it is easier to see. Scroll down to ICMPv4 and enable these two inbound rules. 
-
-<p>
-<img src="https://i.imgur.com/biR5Bf1.png" height="80%" width="80%" alt="10. ICMP enabled"/>
-</p>
 
 Switch back to Client-1 and the Command line will start to ping DC-1 successfully. 
 
-<p>
-<img src="https://i.imgur.com/IeA89LA.png" height="80%" width="80%" alt="11. DC-1 Client1 connectivity"/>
-</p>
+![image](https://github.com/mathew-perez/configure-ad/assets/144407220/7d32911a-e2da-4573-ba3a-1ace7672db8a)
+
 
 <h3>Step 3: Install Active Directory</h3>
 
