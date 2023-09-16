@@ -185,15 +185,12 @@ Copy and paste the script into a new Powershell console.
 
 ![image](https://github.com/mathew-perez/configure-ad/assets/144407220/51a68c19-40de-4cd4-85c8-927da3fcb467)
 
-Once the users have been created, go back to Active Directory Users and Computers. All the users that were created were placed into the _ EMPLOYEES organizational unit. Choose one user  and log into Client-1 with the user. Remember the password is Password1. 
+Once the users have been created, go back to Active Directory Users and Computers. All the users that were created were placed into the _ EMPLOYEES organizational unit. Choose one user and log into Client-1 with the user. Remember the password is Password1. 
 
-<p>
-<img src="https://i.imgur.com/QzRho2A.png" height="80%" width="80%" alt="47"/>
-</p>
+![image](https://github.com/mathew-perez/configure-ad/assets/144407220/2535512e-b1bd-49a6-aed0-cc6ffd6175df)
+![image](https://github.com/mathew-perez/configure-ad/assets/144407220/8405c3d4-6328-41c9-8b3a-06fc4decbd72)
 
-<p>
-<img src="https://i.imgur.com/DgfxJtj.png" height="80%" width="80%" alt="48"/>
-</p>
+
 
 <h3>Bonus Step: How to unlock users' accounts and reset passwords</h3>
 In order to unlock a user's account, right click the user account and click "Properties." 
@@ -211,8 +208,8 @@ Click on "Unlock Account." You can also right click the user account and "Reset 
 <img src="https://i.imgur.com/HrMlyi7.png" height="80%" width="80%" alt="51"/>
 </p>
 
-Thank you for checking out my Active Directory tutorial! I hope you were able to learn and build some intuition on how to use Active Directory. I would suggest doing this exercise several times in order to build the knowledge and skills in Active Directory. Especially if you are trying to shoot for an IT job, where Active Directory is used heavily. 
+Thank you for checking out my Active Directory tutorial! I hope you were able to learn and build some intuition on how to use Active Directory. 
 
 <p></p>
 
-**REMEMBER TO DELETE YOUR RESOURCES ONCE YOU ARE DONE WITH THE LAB!**
+REMEMBER TO DELETE YOUR RESOURCES IN MICROSOFT AZURE ONCE YOU ARE DONE WITH THE LAB
