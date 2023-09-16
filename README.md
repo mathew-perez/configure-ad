@@ -35,15 +35,8 @@ The first virtual machine is the domain controller (DC-1) and will run Windows S
 
 The second virtual machine is the client (Client-1) and will run Windows 10. The client is just any computer connected to the domain controller. 
 
-Note: Ensure that Client-1 is on the same virutal network as DC-1. This is normally automatically done under the "Networking" tab but double check. 
+![image](https://github.com/mathew-perez/configure-ad/assets/144407220/62884693-1096-41e3-9c3a-fb89cfc4423f)
 
-<p>
-<img src="https://i.imgur.com/XbuO2GD.png" height="80%" width="80%" alt="1. DC1 VM"/>
-</p>
-
-<p>
-<img src="https://i.imgur.com/epKINcm.png" height="80%" width="80%" alt="2. DC1 VM"/>
-</p>
 
 Next is to ensure DC-1's private IP address is changed from dynamic to static. DC-1's private IP address needs to be static so it does not change during the course of this exercise. 
 
