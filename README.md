@@ -140,7 +140,7 @@ Once logged in, right click the Start menu and click "System." Then click "Remot
 
 
 <h3>Step 7: Create users in Active Directory using Powershell script</h3>
-Seventh and final step is to use Powershell to create users. 
+The seventh and final step is to use Powershell to create users. 
 
 <p></p>
 
@@ -181,21 +181,11 @@ foreach ($n in $USER_FIRST_LAST_LIST) {
 
 Go back into DC-1 and open Windows Powershell from the start menu. Right click it and "Run as administrator."
 
-<p>
-<img src="https://i.imgur.com/GM8VLuY.png" height="80%" width="80%" alt="44"/>
-</p>
+Copy and paste the script into a new Powershell console. 
 
-<p>
-<img src="https://i.imgur.com/oLTbGLc.png" height="80%" width="80%" alt="45"/>
-</p>
+![image](https://github.com/mathew-perez/configure-ad/assets/144407220/51a68c19-40de-4cd4-85c8-927da3fcb467)
 
-Copy and paste the script into a new Powershell console. I modified the script to only create 10 users so it is easier to manage and play around with. 
-
-<p>
-<img src="https://i.imgur.com/2Yot0nU.png" height="80%" width="80%" alt="46"/>
-</p>
-
-Once the users have been created, go back to Active Directory Users and Computers. All the users that were created were placed into the _ EMPLOYEES organizational unit. Choose one user (fihapi.nile) and log into Client-1 with the user. Remember the password is Password1. 
+Once the users have been created, go back to Active Directory Users and Computers. All the users that were created were placed into the _ EMPLOYEES organizational unit. Choose one user  and log into Client-1 with the user. Remember the password is Password1. 
 
 <p>
 <img src="https://i.imgur.com/QzRho2A.png" height="80%" width="80%" alt="47"/>
