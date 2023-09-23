@@ -203,5 +203,3 @@ On the DC-1 VM, go to active directory users and computers. Go to the _Employees
 Thank you for checking out my Active Directory tutorial! I hope you were able to learn and build some intuition on how to use Active Directory. 
 
 <p></p>
-
-REMEMBER TO DELETE YOUR RESOURCES IN MICROSOFT AZURE ONCE YOU ARE DONE WITH THE LAB
